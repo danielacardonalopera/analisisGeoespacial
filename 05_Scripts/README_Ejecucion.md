@@ -1,16 +1,115 @@
-# 🛠️ Guía de Ejecución Técnica - Carpeta de Scripts (`05_Scripts`)
+# Guía técnica de ejecución
 
-Este directorio contiene los scripts de Python (`.py`) necesarios para ejecutar de forma modular y automatizada el flujo de análisis geoespacial del proyecto. 
+## Nueva arquitectura
 
-Los scripts han sido diseñados de forma **portátil y reproducible**, utilizando rutas relativas dinámicas para que cualquier persona que clone el repositorio pueda ejecutarlos localmente sin configurar rutas de Google Drive o directorios absolutos de su sistema.
+La ejecución ya no utiliza `runpy` ni rutas de Google Drive.
 
----
+```text
+config.py       → rutas y parámetros
+utils.py        → funciones compartidas
+01_...py        → preparación
+02_...py        → datos espaciales
+03_...py        → patrón de muestreo
+04_...py        → anomalías
+run_all.py      → orquestación completa
+```
 
-## 📋 Requisitos Previos
+## Principio de portabilidad
 
-Antes de ejecutar los scripts, asegúrate de cumplir con los siguientes pasos desde la raíz del proyecto:
+`config.py` identifica la raíz del repositorio con:
 
-1. **Instalar dependencias:**
-   Asegúrate de instalar los paquetes listados en el archivo `requirements.txt` ubicado en la raíz del proyecto:
-   ```bash
-   pip install -r requirements.txt
+```python
+RUTA_PROYECTO = Path(__file__).resolve().parents[1]
+```
+
+Por ello, cualquier persona puede clonar el repositorio en cualquier
+carpeta y ejecutar el proyecto sin editar rutas.
+
+## Ejecución completa
+
+Abra una terminal en la raíz del repositorio:
+
+```bash
+python 05_Scripts/run_all.py
+```
+
+`run_all.py` ejecuta cada etapa en un proceso independiente. Si una etapa
+falla, el proceso se detiene y conserva el mensaje de error original.
+
+## Ejecución por etapas
+
+```bash
+python 05_Scripts/01_preparacion_datos.py
+```
+
+Genera las capas delimitadas, la primera tabla y la primera figura.
+
+```bash
+python 05_Scripts/02_datos_espaciales.py
+```
+
+Ejecuta la exploración estadística y espacial introductoria.
+
+```bash
+python 05_Scripts/03_patron_muestreo.py
+```
+
+Analiza el patrón de las muestras.
+
+```bash
+python 05_Scripts/04_patron_anomalias.py
+```
+
+Analiza el patrón espacial de las anomalías y sus relaciones geológicas.
+
+## Verificación previa
+
+```bash
+python -c "from pathlib import Path; print(Path.cwd())"
+```
+
+Compruebe que se encuentra en la raíz del repositorio y que existen:
+
+```text
+02_Datos/02_Procesados/Muestras_Cu.gpkg
+02_Datos/02_Procesados/Geologia_Suroeste.gpkg
+02_Datos/02_Procesados/Fallas_Suroeste.gpkg
+02_Datos/02_Procesados/Municipios_Suroeste.gpkg
+```
+
+## Errores frecuentes
+
+### `ModuleNotFoundError`
+
+Active el entorno virtual e instale:
+
+```bash
+pip install -r requirements.txt
+```
+
+### No se encuentra una capa
+
+Revise nombres y ubicación en `02_Datos/02_Procesados`.
+
+### No existe el campo `Cu`
+
+El nombre es sensible a mayúsculas y espacios.
+
+### Error de CRS
+
+Asigne o reproyecte correctamente las capas en QGIS.
+
+### Error de memoria
+
+Ejecute las etapas por separado y cierre figuras anteriores.
+
+## Reproducibilidad
+
+Los parámetros generales se centralizan en `config.py`:
+
+- CRS;
+- semilla;
+- simulaciones;
+- significancia;
+- percentil de anomalía;
+- mínimo de muestras por unidad.

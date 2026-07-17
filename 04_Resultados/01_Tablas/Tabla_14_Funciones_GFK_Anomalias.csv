@@ -1,0 +1,4 @@
+﻿Función,Posición frente a la envolvente CSR,Puntos del soporte fuera de la envolvente,Lectura
+G (vecino más cercano),Por encima a distancias cortas,8 de 20,Las anomalías tienen vecinas más próximas de lo esperado bajo el azar: agrupamiento
+F (espacios vacíos),Por debajo en casi todo el soporte,17 de 20,Los espacios vacíos son más extensos de lo esperado bajo el azar: agrupamiento
+K de Ripley,Por encima en casi todo el soporte,19 de 20,Exceso de anomalías vecinas a todas las escalas: agrupamiento
