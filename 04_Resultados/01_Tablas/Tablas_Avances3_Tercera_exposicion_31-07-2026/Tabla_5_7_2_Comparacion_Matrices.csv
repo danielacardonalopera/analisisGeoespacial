@@ -1,0 +1,4 @@
+Matriz,Componentes,Islas,Vecinos mínimos,Vecinos promedio,Vecinos máximos
+Queen,22,6,0,4.261001517450683,8
+Rook,61,26,0,2.291350531107739,4
+KNN (4),3,0,4,4.0,4

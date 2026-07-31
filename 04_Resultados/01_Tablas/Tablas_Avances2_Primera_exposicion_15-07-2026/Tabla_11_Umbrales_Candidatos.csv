@@ -1,0 +1,4 @@
+﻿Criterio,Condición,Anomalías resultantes,Porcentaje del total (%)
+Percentil 90 estricto,Cu > 150 ppm,60,2.957121734844751
+Percentil 90 inclusivo (adoptado),Cu >= 150 ppm,283,13.947757516017742
+Límite de valores atípicos (boxplot),Cu >= 200 ppm,60,2.957121734844751

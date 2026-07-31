@@ -1,0 +1,10 @@
+﻿Parámetro,Valor
+Número de muestras,2029
+Sistema de referencia,EPSG:21897
+Número de lags,15
+Criterio de distancia máxima,median
+Distancia máxima efectiva (m),46713.94
+Distancia máxima efectiva (km),46.71
+Ancho aproximado del lag (m),3114.26
+Ancho aproximado del lag (km),3.11
+Tolerancia angular,±22.5°

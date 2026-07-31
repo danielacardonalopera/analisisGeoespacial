@@ -1,0 +1,11 @@
+﻿Parámetro,Valor,Unidad
+Número de muestras,2029,muestras
+Tipo de Kernel,Gaussiano,—
+Método de selección de banda,Regla de Scott,—
+Factor de banda,0.2810517704977813,adimensional
+Banda efectiva Este,7935.047635122363,m
+Banda efectiva Norte,9879.1455680757,m
+Banda efectiva promedio,8853.896920395486,m
+Resolución de la malla,300 × 300,celdas
+Tamaño aproximado de celda,411.20144816053516,m
+Variable representada,Densidad relativa de ubicaciones de muestreo,0–1

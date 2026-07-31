@@ -1,0 +1,19 @@
+﻿Indicador,Resultado
+Variable analizada,cu_media_ppm
+Matriz espacial,Queen de primer orden
+Transformación,Estandarizada por filas (R)
+Observaciones originales,659
+Islas excluidas,6
+Valores nulos excluidos,0
+Observaciones analizadas,653
+Componentes conectados,16
+Número de permutaciones,999
+Índice de Moran observado,0.4972893502652909
+Valor esperado bajo aleatoriedad,-0.0015337423312883436
+Diferencia I - E(I),0.49882309259657925
+Z-score normal,17.21110317378268
+p-value normal,2.1921570831673085e-66
+Z-score de permutaciones,17.466687617235817
+Pseudo p-value,0.001
+Tipo de autocorrelación,Positiva
+Significancia,Estadísticamente significativa

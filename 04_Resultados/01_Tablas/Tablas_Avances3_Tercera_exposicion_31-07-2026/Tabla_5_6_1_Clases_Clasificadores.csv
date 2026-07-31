@@ -1,0 +1,16 @@
+Método,Clase,Límite inferior,Límite superior,Frecuencia,Porcentaje (%)
+Intervalo igual,1,8.5,76.8,437,66.3
+Intervalo igual,2,76.8,145.1,151,22.9
+Intervalo igual,3,145.1,213.4,63,9.6
+Intervalo igual,4,213.4,281.7,5,0.8
+Intervalo igual,5,281.7,350.0,3,0.5
+Cuantiles,1,8.5,32.17,132,20.0
+Cuantiles,2,32.17,55.0,134,20.3
+Cuantiles,3,55.0,70.0,146,22.2
+Cuantiles,4,70.0,100.0,125,19.0
+Cuantiles,5,100.0,350.0,122,18.5
+Fisher-Jenks,1,8.5,45.0,192,29.1
+Fisher-Jenks,2,45.0,78.0,249,37.8
+Fisher-Jenks,3,78.0,120.0,124,18.8
+Fisher-Jenks,4,120.0,177.5,70,10.6
+Fisher-Jenks,5,177.5,350.0,24,3.6

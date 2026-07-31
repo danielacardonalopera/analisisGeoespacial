@@ -1,5 +1,0 @@
-﻿Capa,Componente espacial,Componente temático principal,Atributos disponibles
-Muestras de Cu,Localización puntual de cada muestra geoquímica,Concentración de cobre (Cu),"Y, X, Cu"
-Fallas,Trazado lineal de estructuras geológicas,Identificación y características de las fallas,"FID_1, OBJECTID, SHAPE_Leng, Tipo, NombreFall, ..."
-Geología,Polígonos que delimitan unidades geológicas,"Código, unidad y descripción litológica","ENTITY, DESCRIPTIO, DESCRIPCIO, UNIDAD_DES"
-Municipios,Polígonos que delimitan divisiones administrativas,Nombre e identificación municipal,"NOMBRE, Shape_Leng, Shape_Area"

@@ -1,0 +1,14 @@
+﻿Indicador,Valor,Interpretación
+Número de observaciones,659,Número de celdas utilizadas para ajustar el modelo.
+Variable respuesta,log(Cu media),Logaritmo natural de la concentración media de cobre por celda.
+Variables explicativas,Elevación media + Relieve,Variables topográficas incluidas en el modelo.
+R²,0.056,"El modelo explica aproximadamente el 5,6 % de la variabilidad observada en la concentración media de cobre."
+R² ajustado,0.053,La capacidad explicativa permanece baja después de corregir por el número de variables.
+Estadístico F,19.37,Evalúa la significancia global del modelo.
+Probabilidad (F),< 0.001,"El modelo es estadísticamente significativo (p < 0,001)."
+AIC,1251.62,Criterio de información utilizado para comparar modelos.
+BIC,1265.09,Criterio de información penalizado por el número de parámetros.
+Durbin-Watson,1.245,Sugiere una posible dependencia positiva entre los residuos.
+Coeficiente elevación media,-0.1383,Relación negativa entre la elevación media y la concentración de cobre.
+Coeficiente relieve,0.1365,Relación positiva entre el relieve topográfico y la concentración de cobre.
+Observaciones,Capacidad explicativa limitada.,"Aunque el modelo es estadísticamente significativo, presenta una capacidad explicativa limitada (R² = 0,056). Esto indica que la elevación media y el relieve, por sí solos, no describen adecuadamente la distribución espacial del cobre. La mayor parte de la variabilidad probablemente está asociada a otros factores geológicos, estructurales y geoquímicos que no fueron incluidos en este modelo. En consecuencia, el modelo debe interpretarse como una aproximación exploratoria y no como un modelo predictivo de alta precisión."

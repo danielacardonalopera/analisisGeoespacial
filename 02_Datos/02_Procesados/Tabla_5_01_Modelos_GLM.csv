@@ -1,0 +1,5 @@
+﻿Modelo,Variable respuesta,Variables explicativas
+Modelo 1,log(Cu media),Elevación media + Relieve
+Modelo 2,log(Cu media),Elevación media + Desviación de la elevación + Relieve
+Modelo 3,log(Cu media),Elevación media + Desviación de la elevación + Relieve + Centroide X
+Modelo 4,log(Cu media),Elevación media + Desviación de la elevación + Relieve + Centroide X + Centroide Y
