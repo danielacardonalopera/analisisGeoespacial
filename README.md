@@ -1,201 +1,169 @@
-# Análisis Geoestadístico de la Distribución Espacial del Cobre en el Suroeste de Antioquia
+# Análisis Geoespacial de la Distribución del Cobre en el Suroeste Antioqueño
 
-## Descripción
+Repositorio del proyecto desarrollado para el curso **Análisis Geoespacial** de la **Facultad de Minas – Universidad Nacional de Colombia**.
 
-Este repositorio contiene el desarrollo del proyecto de **Análisis
-Geoespacial** realizado en Google Colab como parte de la Maestría en
-Ingeniería -- Recursos Minerales.
+Este proyecto aplica técnicas de análisis espacial a una base de **2.029 muestras geoquímicas de cobre (Cu)** con el objetivo de comprender su distribución espacial y estimar la concentración del metal en zonas donde no existen mediciones directas.
 
-El objetivo del estudio es analizar la distribución espacial de las
-concentraciones de cobre (Cu) mediante técnicas de análisis exploratorio
-espacial y geoestadística, utilizando interpolación por **Kriging
-Ordinario** para generar un modelo continuo de distribución y su
-correspondiente mapa de incertidumbre.
+La metodología sigue la estructura del curso, desarrollando progresivamente el análisis desde los **datos puntuales**, pasando por los **datos de área**, hasta la construcción de **superficies continuas** mediante técnicas de interpolación y modelos probabilísticos.
 
-------------------------------------------------------------------------
+---
 
-# Estado del proyecto
+# Objetivo
 
-Actualmente el proyecto se encuentra en desarrollo.
+Analizar la distribución espacial del cobre en el Suroeste antioqueño mediante técnicas modernas de análisis geoespacial y comparar diferentes métodos para estimar la concentración de cobre y su incertidumbre en todo el territorio de estudio.
 
-## Avance metodológico
+---
 
--   ✅ Preparación de la información
--   ✅ Análisis exploratorio de los datos
--   ✅ Exploración espacial
--   ✅ Evaluación de la anisotropía
--   ✅ Variograma experimental
--   ✅ Ajuste del modelo variográfico
--   🔄 Validación cruzada (en desarrollo)
--   ⏳ Kriging ordinario
--   ⏳ Mapa de incertidumbre
--   ⏳ Conclusiones
+# Estructura del proyecto
 
-------------------------------------------------------------------------
+## 1. Planteamiento del problema
 
-# Metodología
+- Contexto geológico del área de estudio.
+- Definición del problema de investigación.
+- Justificación.
+- Objetivos.
+- Relevancia para la exploración minera.
 
-## 1. Preparación de la información
+---
 
-**Objetivo:** organizar, depurar y validar la información espacial y
-geoquímica antes del análisis estadístico y geoestadístico.
+## 2. Análisis de datos puntuales
 
-### 1.1 Organización de la información
+Estudio del patrón espacial de las muestras y de las anomalías geoquímicas.
 
-### 1.2 Carga de datos
+### Temas desarrollados
 
-### 1.3 Verificación de las capas espaciales
+- Preparación de datos espaciales
+- Exploración de datos
+- Centrografía
+- Densidad Kernel
+- Vecino más cercano (Clark & Evans)
+- Definición de anomalías geoquímicas
+- Funciones G, F y K de Ripley
+- Conteo por cuadrantes
+- Simulación Monte Carlo
+- Relación entre anomalías, geología y fallas
 
-### 1.4 Conversión y revisión de la variable Cu
+---
 
-### 1.5 Verificación de geometrías
+## 3. Análisis de datos de área
 
-------------------------------------------------------------------------
+Conversión de información puntual en unidades espaciales agregadas para estudiar la dependencia espacial.
 
-## 2. Análisis exploratorio de los datos
+### Métodos implementados
 
-**Objetivo:** caracterizar estadísticamente la distribución de la
-concentración de cobre y evaluar el comportamiento de la variable antes
-del análisis espacial.
+- Construcción de malla regular
+- Estadísticos zonales
+- Mapas coropléticos
+- Índice de Moran
+- Indicadores Locales de Asociación Espacial (LISA)
+- Regresión lineal (OLS)
+- Modelos autorregresivos espaciales (SAR)
+- Regresión Geográficamente Ponderada (GWR)
+- Regresión Geográficamente Ponderada Multiescala (MGWR)
 
-### 2.1 Estadística descriptiva
+---
 
-### 2.2 Estadísticos complementarios
+## 4. Análisis de superficies
 
-### 2.3 Histograma
+Estimación continua de la concentración de cobre mediante métodos determinísticos, geoestadísticos y probabilísticos.
 
-### 2.4 Gráfico Q-Q
+### Métodos determinísticos
 
-### 2.5 Prueba de normalidad de Anderson-Darling
+- Vecino más cercano
+- Inverse Distance Weighting (IDW)
+- Triangulación de Delaunay
+- Polígonos de Thiessen (Voronoi)
 
-### 2.6 Diagrama de caja (Boxplot)
+### Geoestadística
 
-------------------------------------------------------------------------
+- Semivariograma experimental
+- Ajuste de modelos teóricos
+- Kriging Ordinario
+- Kriging Universal
 
-## 3. Exploración espacial
+### Procesos Gaussianos
 
-**Objetivo:** analizar la distribución espacial de las muestras de cobre
-y su relación con el contexto geológico y estructural del área de
-estudio.
+- Fundamentos probabilísticos
+- Comparación de kernels
+- Procesos Gaussianos espaciales
+- Incorporación de covariables
+- Mapas de incertidumbre
+- Validación cruzada espacial
 
-### 3.1 Preparación de la base cartográfica
+---
 
-### 3.2 Localización del área de estudio
+# Datos utilizados
 
-### 3.3 Distribución espacial de las muestras de cobre
+El proyecto integra diferentes fuentes de información espacial:
 
-### 3.4 Verificación de la cobertura espacial
+- 2.029 muestras geoquímicas de cobre (Cu)
+- Cartografía geológica
+- Red de fallas geológicas
+- Límites municipales del Suroeste antioqueño
+- Modelo Digital de Elevación (DEM)
 
-### 3.5 Distribución de las muestras sobre las unidades geológicas
+**Sistema de referencia:** EPSG:21897 (Bogotá 1975 / Colombia West Zone).
 
-#### 3.5.1 Preparación de la cartografía geológica
-
-#### 3.5.2 Distribución espacial de las muestras sobre las unidades geológicas
-
-#### 3.5.3 Distribución de las muestras geoquímicas por unidad geológica
-
-### 3.6 Distribución de las muestras de cobre respecto a las fallas geológicas
-
-#### 3.6.1 Preparación de la cartografía estructural
-
-#### 3.6.2 Distribución espacial de las muestras respecto a las fallas geológicas
-
-#### 3.6.3 Proximidad de las muestras de cobre a las fallas geológicas
-
-------------------------------------------------------------------------
-
-## 4. Análisis geoestadístico
-
-**Objetivo:** modelar la variabilidad espacial de la concentración de
-cobre mediante técnicas geoestadísticas y generar una superficie
-continua de interpolación.
-
-### 4.1 Análisis exploratorio de la variable Cu en el área de estudio
-
-### 4.2 Evaluación de la anisotropía
-
-### 4.3 Variograma experimental
-
-### 4.4 Ajuste del modelo variográfico
-
-### 4.5 Validación cruzada
-
-### 4.6 Interpolación espacial mediante Kriging Ordinario
-
-### 4.7 Evaluación de la incertidumbre de la interpolación
-
-------------------------------------------------------------------------
-
-## 5. Conclusiones
-
-En desarrollo.
-
-------------------------------------------------------------------------
-
-# Estructura del repositorio
-
-``` text
-Analisis_Geoespacial_Cobre_Antioquia
-│
-├── 01_Notebook/
-├── 02_Datos/
-│   ├── 01_Brutos/
-│   ├── 02_Procesados/
-│   └── 03_Capas_Base/
-├── 03_Figuras/
-├── 04_Tablas/
-├── 05_Resultados/
-│   ├── Variogramas/
-│   ├── Validacion_Cruzada/
-│   ├── Kriging/
-│   ├── Incertidumbre/
-│   └── Raster/
-├── 06_Scripts/
-├── 07_Documentacion/
-├── README.md
-├── requirements.txt
-└── LICENSE
-```
-
-------------------------------------------------------------------------
+---
 
 # Herramientas utilizadas
 
--   Python 3
--   Google Colab
--   GeoPandas
--   NumPy
--   Pandas
--   Matplotlib
--   SciPy
--   GSTools
--   PyKrige
--   Rasterio
--   Shapely
--   Contextily
+- Python
+- Jupyter Notebook
+- GeoPandas
+- NumPy
+- Pandas
+- SciPy
+- Matplotlib
+- Scikit-Learn
+- Scikit-GStat
+- PyKrige
+- PySAL
+- MGWR
+- Rasterio
+- QGIS
 
-------------------------------------------------------------------------
+---
 
-# Productos generados
+# Resultados
 
--   Estadísticos descriptivos
--   Histogramas
--   Gráficos Q-Q
--   Diagramas de caja (Boxplot)
--   Cartografía temática
--   Análisis geológico y estructural
--   Variogramas experimentales
--   Modelos variográficos
--   Validación cruzada
--   Mapas interpolados mediante Kriging Ordinario
--   Mapas de incertidumbre
+El proyecto permitió:
 
-------------------------------------------------------------------------
+- Caracterizar el patrón espacial del muestreo.
+- Identificar anomalías geoquímicas de cobre.
+- Analizar la autocorrelación espacial de las concentraciones.
+- Evaluar la influencia de variables geológicas y topográficas.
+- Comparar distintos métodos de interpolación espacial.
+- Generar mapas continuos de concentración e incertidumbre.
+- Validar el desempeño de cada modelo mediante validación cruzada espacial.
 
-# Estado de actualización
+---
 
-**Versión actual:** v0.5
+# Contenido del repositorio
 
-**Última actualización:** Julio de 2026
+```
+├── data/                  # Datos espaciales utilizados
+├── notebooks/             # Notebook principal del proyecto
+├── figures/               # Mapas y figuras generadas
+├── outputs/               # Resultados del análisis
+├── presentations/         # Entregables y exposiciones del curso
+├── article/               # Artículo científico derivado del proyecto
+└── README.md
+```
 
-**Estado:** En desarrollo
+---
+
+# Publicación asociada
+
+Como resultado del proyecto se desarrolló un artículo científico que integra todos los análisis realizados durante el curso bajo un enfoque metodológico progresivo para la representación espacial de variables geoquímicas.
+
+---
+
+# Autora
+
+**Daniela Cardona Lopera**
+
+Facultad de Minas  
+Universidad Nacional de Colombia
+
+Curso de Análisis Geoespacial
